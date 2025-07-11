@@ -64,14 +64,6 @@ const client = new Client({
   ],
 });
 
-const express = require("express");
-const app = express();
-app.get("/", (req, res) => res.send("Bot is running!"));
-app.listen(process.env.PORT || 3000, () => {
-  console.log("Web server running.");
-});
-
-
 client.once("ready", () => {
   console.log(`🤖 Logged in as ${client.user.tag}`);
 });
@@ -118,6 +110,5 @@ client.on("messageCreate", async (message) => {
 });
 
 console.log("🔑 Loaded Discord Token:", process.env.DIS_TOKEN?.slice(0, 10), "Length:", process.env.DIS_TOKEN?.length);
-console.log("✅ Loaded DIS_TOKEN:", process.env.DIS_TOKEN ? "Yes" : "No");
-console.log("🔑 DIS_TOKEN:", process.env.DIS_TOKEN);
+
 client.login(process.env.DIS_TOKEN);
