@@ -52,7 +52,7 @@
 // client.login(process.env.DIS_TOKEN);
 
 
-require("dotenv").config();
+//require("dotenv").config();
 const { Client, GatewayIntentBits } = require("discord.js");
 const axios = require("axios");
 
