@@ -110,5 +110,5 @@ client.on("messageCreate", async (message) => {
 });
 
 console.log("🔑 Loaded Discord Token:", process.env.DIS_TOKEN?.slice(0, 10), "Length:", process.env.DIS_TOKEN?.length);
-
+console.log("✅ Loaded DIS_TOKEN:", process.env.DIS_TOKEN ? "Yes" : "No");
 client.login(process.env.DIS_TOKEN);
